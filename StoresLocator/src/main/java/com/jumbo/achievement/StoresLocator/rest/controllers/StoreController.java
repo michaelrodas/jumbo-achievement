@@ -1,7 +1,8 @@
 package com.jumbo.achievement.StoresLocator.rest.controllers;
 
-import com.jumbo.achievement.StoresLocator.dao.IStoreDAO;
-import com.jumbo.achievement.StoresLocator.dto.Store;
+import com.jumbo.achievement.StoresLocator.core.Location;
+import com.jumbo.achievement.StoresLocator.core.StoreLocator;
+import com.jumbo.achievement.StoresLocator.dto.ComplexStore;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -20,13 +21,12 @@ import java.util.Collection;
 public class StoreController {
 
     @Autowired
-    private IStoreDAO storeDAO;
+    private StoreLocator storeLocator;
 
     @RequestMapping(value = "/{latitude}/{longitude}", method = RequestMethod.GET)
-    public ResponseEntity<Collection<Store>> getNearestStores(@PathVariable double latitude, @PathVariable double longitude){
-        Collection<Store> storesList = storeDAO.getAllStores();
-        //TODO invocar logica que trae las 5 tiendas
-        Collection<Store> foundStores = null;
+    public ResponseEntity<Collection<ComplexStore>> getNearestStores(@PathVariable double latitude, @PathVariable double longitude){
+        Location startingPoint = new Location(latitude, longitude);
+        Collection<ComplexStore> foundStores = storeLocator.locateNearestStores(startingPoint);
         if(foundStores.isEmpty()){
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         }
