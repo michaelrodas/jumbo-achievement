@@ -1,0 +1,28 @@
+.title-application {
+    margin-top:1%;
+    margin-bottom:1%;
+    text-align: center;
+    text-transform:uppercase;
+}
+
+.body-align-application {
+    margin-left:3%;
+    margin-right:3%;
+}
+
+.row-align-button {
+     width:100%;
+}
+
+.row-align-textofbutton {
+     width:50%;
+     float: left;
+     display: inline;
+     padding-left: 6%;
+     padding-right: 2%;
+}
+
+.row-align-result {
+     width:100%;
+     margin-top: 2%
+}
