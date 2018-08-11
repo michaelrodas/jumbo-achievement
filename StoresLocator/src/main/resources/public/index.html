@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<body>
+
+<p>Click the button to get your coordinates.</p>
+
+<button onclick="getLocation()">Try It</button>
+
+<p id="demo"></p>
+
+<script>
+var x = document.getElementById("demo");
+
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+        navigator.geolocation.getCurrentPosition(showResult);
+    } else {
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+}
+
+function showPosition(position) {
+    x.innerHTML = "Latitude: " + position.coords.latitude +
+    "<br>Longitude: " + position.coords.longitude;
+}
+
+function showResult(position)
+{
+		$.get("./stores/"+position.coords.latitude+"/"+position.coords.longitude, function (resultData) {
+		$("body").append("<div>The closest stores to your position are:</div>")
+		$("body").append("<br>")
+		for (var i = 0; i < resultData.length; i++) {
+            $("body").append("<div>Store "+(i+1)+":")
+            $("body").append("Distance to store: "+JSON.stringify(resultData[i].distanceToStore)+" meters")
+            $("body").append("<br>Store name: "+JSON.stringify(resultData[i].store.addressName))
+            $("body").append("<br><br></div>")
+		}
+		});
+}
+
+</script>
+<div class="content">
+    <div class="data">
+    </div>
+</div>
+</body>
+</html>

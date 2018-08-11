@@ -7,11 +7,7 @@ import com.jumbo.achievement.StoresLocator.dto.Store;
  */
 public class Location
 {
-    //@Min(value = -90, message = "Age should not be less than 18")
-    //@Max(value = 90, message = "Age should not be greater than 150")
     private double      latitude;
-    //@Min(value = -180, message = "Age should not be less than 18")
-    //@Max(value = 180, message = "Age should not be greater than 150")
     private double      longitude;
 
     public Location(double lat, double lng)
@@ -23,7 +19,7 @@ public class Location
     // Compute the distance in meters
     public double distanceTo(Store store)
     {
-        double earthRadius = 3958.75;
+        final double earthRadius = 3958.75;
         double dLat = Math.toRadians(latitude - store.getLatitude());
         double dLng = Math.toRadians(longitude - store.getLongitude());
         double a = Math.sin(dLat/2) * Math.sin(dLat/2) +
