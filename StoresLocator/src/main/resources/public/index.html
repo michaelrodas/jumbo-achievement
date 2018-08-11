@@ -31,6 +31,7 @@ function showPosition(position) {
 
     var lat = position.coords.latitude;
     var lon = position.coords.longitude;
+    $("body").append("<br>Your position is:")
     $("body").append("<br>Latitude: "+lat)
     $("body").append(" Longitude: "+lon+"<br>")
     var latlon = new google.maps.LatLng(lat, lon)
@@ -86,7 +87,6 @@ function showResult(position)
             $("body").append("<br><br></div>")
 
             latlon = new google.maps.LatLng(resultData[i].store.latitude, resultData[i].store.longitude)
-            //bounds.extend(latlon);
             marker = new google.maps.Marker({position:latlon,map:map,title:resultData[i].store.addressName});
             marker.setIcon('http://maps.google.com/mapfiles/ms/icons/blue-dot.png')
             bounds.extend(marker.position);
