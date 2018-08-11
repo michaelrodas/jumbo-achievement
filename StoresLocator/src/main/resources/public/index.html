@@ -76,7 +76,6 @@ function showResult(position)
         var lon = position.coords.longitude;
 
 		$.get("./stores/"+lat+"/"+lon, function (resultData) {
-		window.foundStores = resultData;
 		$("body").append("<div>The closest stores to your position are:</div>")
 		$("body").append("<br>")
 		for (var i = 0; i < resultData.length; i++) {
