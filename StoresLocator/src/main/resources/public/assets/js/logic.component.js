@@ -57,6 +57,7 @@ var x = document.getElementById("demo");
 
     function showResult(position)
     {
+            $("#resultcontent").load(" #resultcontent > *");
             var lat = position.coords.latitude;
             var lon = position.coords.longitude;
 
