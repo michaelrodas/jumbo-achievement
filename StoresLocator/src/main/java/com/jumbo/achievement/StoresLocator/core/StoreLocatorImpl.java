@@ -9,6 +9,8 @@ import org.springframework.stereotype.Component;
 
 import java.util.Collection;
 import java.util.Comparator;
+import java.util.TreeMap;
+import java.util.TreeSet;
 import java.util.stream.Collectors;
 
 /**
@@ -29,14 +31,18 @@ public class StoreLocatorImpl implements StoreLocator{
     public Collection<ComplexStore> locateNearestStores(Location startingPoint){
         Location initialLocation = startingPoint;
         Collection<Store> allStores = storeDAO.getAllStores();
-
+/*
        Collection<ComplexStore> foundStores = allStores.parallelStream()
                 .map(store -> new ComplexStore(initialLocation.distanceTo(store), store))
                 .sorted(Comparator.comparing(ComplexStore::getDistanceToStore))
                 //.peek(c -> c.getDistanceToStore()).collect(Collectors.toList());
                 .limit(5)
                 .collect(Collectors.toList());
-
-        return foundStores;
+*/
+        TreeSet<ComplexStore> sortedStoresByDistance = allStores.parallelStream()
+                .map(store -> new ComplexStore(initialLocation.distanceTo(store), store))
+                .collect(Collectors.toCollection(
+                        ()->new TreeSet<>(Comparator.comparingDouble(ComplexStore::getDistanceToStore))));
+        return sortedStoresByDistance.stream().limit(5).collect(Collectors.toList());
     }
 }

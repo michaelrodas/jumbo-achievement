@@ -29,6 +29,8 @@ public class StoreLocatorTest {
         Assert.assertNotNull(result);
         Assert.assertFalse(result.isEmpty());
         Assert.assertEquals(storesList.get(0).getUuid(), ((ComplexStore) result.toArray()[0]).getStore().getUuid());
+        Assert.assertEquals(storesList.get(1).getUuid(), ((ComplexStore) result.toArray()[2]).getStore().getUuid());
+        Assert.assertEquals(storesList.get(2).getUuid(), ((ComplexStore) result.toArray()[1]).getStore().getUuid());
     }
 
     private ArrayList<Store> getStoresList() {
