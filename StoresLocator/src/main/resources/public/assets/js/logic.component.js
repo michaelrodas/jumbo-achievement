@@ -33,7 +33,7 @@ var x = document.getElementById("demo");
 
         map = new google.maps.Map(document.getElementById("mapholder"), myOptions);
         var marker = new google.maps.Marker({position:latlon,map:map,title:"You are here!"});
-        marker.setIcon('http://maps.google.com/mapfiles/ms/icons/green-dot.png')
+        marker.setIcon('https://maps.google.com/mapfiles/ms/icons/green-dot.png')
         bounds.extend(marker.position);
         $("body").append("<br>")
     }
@@ -73,7 +73,7 @@ var x = document.getElementById("demo");
 
                 latlon = new google.maps.LatLng(resultData[i].store.latitude, resultData[i].store.longitude)
                 marker = new google.maps.Marker({position:latlon,map:map,title:resultData[i].store.addressName});
-                marker.setIcon('http://maps.google.com/mapfiles/ms/icons/blue-dot.png')
+                marker.setIcon('https://maps.google.com/mapfiles/ms/icons/blue-dot.png')
                 bounds.extend(marker.position);
                 marker.setMap(map);
                 map.fitBounds(bounds);
