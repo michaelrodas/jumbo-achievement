@@ -3,8 +3,6 @@ package com.jumbo.achievement.StoresLocator.core;
 import com.jumbo.achievement.StoresLocator.dao.IStoreDAO;
 import com.jumbo.achievement.StoresLocator.dto.ComplexStore;
 import com.jumbo.achievement.StoresLocator.dto.Store;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,7 +16,6 @@ import java.util.stream.Collectors;
  */
 @Service
 public class StoreLocatorImpl implements StoreLocator{
-    private static final Logger logger = LoggerFactory.getLogger(StoreLocatorImpl.class);
     @Autowired
     private IStoreDAO storeDAO;
 
