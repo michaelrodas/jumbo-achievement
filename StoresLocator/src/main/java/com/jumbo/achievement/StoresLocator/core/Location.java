@@ -1,10 +1,13 @@
 package com.jumbo.achievement.StoresLocator.core;
 
 import com.jumbo.achievement.StoresLocator.dto.Store;
+import org.springframework.beans.factory.annotation.Configurable;
+import org.springframework.stereotype.Component;
 
 /**
  * Created by MichaelR on 8/9/2018.
  */
+@Configurable
 public class Location
 {
     private double      latitude;

@@ -6,6 +6,7 @@ import com.jumbo.achievement.StoresLocator.dto.Store;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Configurable;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.util.Collection;
 import java.util.Comparator;
@@ -16,8 +17,7 @@ import java.util.stream.Collectors;
 /**
  * Created by MichaelR on 8/9/2018.
  */
-@Component
-@Configurable
+@Service
 public class StoreLocatorImpl implements StoreLocator{
 
     @Autowired
@@ -43,6 +43,7 @@ public class StoreLocatorImpl implements StoreLocator{
                 .map(store -> new ComplexStore(initialLocation.distanceTo(store), store))
                 .collect(Collectors.toCollection(
                         ()->new TreeSet<>(Comparator.comparingDouble(ComplexStore::getDistanceToStore))));
+
         return sortedStoresByDistance.stream().limit(5).collect(Collectors.toList());
     }
 }
