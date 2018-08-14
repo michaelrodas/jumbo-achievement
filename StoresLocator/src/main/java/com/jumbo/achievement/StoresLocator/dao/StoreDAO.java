@@ -8,12 +8,12 @@ import com.jumbo.achievement.StoresLocator.dto.Store;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.cache.annotation.Cacheable;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Collection;
 
 /**
  * Created by MichaelR on 8/9/2018.
@@ -24,7 +24,7 @@ public class StoreDAO implements IStoreDAO{
 
     @Override
     @Cacheable("stores")
-    public ArrayList<Store> getAllStores() {
+    public Collection<Store> getAllStores() {
         ArrayList<Store> stores = null;
         ObjectMapper mapper = new ObjectMapper();
         mapper.configure(DeserializationFeature.ACCEPT_SINGLE_VALUE_AS_ARRAY, true);
