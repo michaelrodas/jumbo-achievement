@@ -8,7 +8,8 @@ import org.springframework.stereotype.Service;
 
 import java.util.Collection;
 import java.util.Comparator;
-import java.util.TreeSet;
+import java.util.Set;
+import java.util.concurrent.ConcurrentSkipListSet;
 import java.util.stream.Collectors;
 
 /**
@@ -25,21 +26,26 @@ public class StoreLocatorImpl implements StoreLocator{
     }
 
     public Collection<ComplexStore> locateNearestStores(Location startingPoint){
-        Location initialLocation = startingPoint;
         Collection<Store> allStores = storeDAO.getAllStores();
 /*
+       -- Regular implementation
        Collection<ComplexStore> foundStores = allStores.parallelStream()
                 .map(store -> new ComplexStore(initialLocation.distanceTo(store), store))
                 .sorted(Comparator.comparing(ComplexStore::getDistanceToStore))
                 //.peek(c -> c.getDistanceToStore()).collect(Collectors.toList());
                 .limit(5)
                 .collect(Collectors.toList());
-*/
-
-        TreeSet<ComplexStore> sortedStoresByDistance = allStores.parallelStream()
+       -- Faster Implementation
+       TreeSet<ComplexStore> sortedStoresByDistance = allStores.parallelStream()
                 .map(store -> new ComplexStore(initialLocation.distanceTo(store), store))
                 .collect(Collectors.toCollection(
                         ()->new TreeSet<>(Comparator.comparingDouble(ComplexStore::getDistanceToStore))));
+*/
+        // Concurrent implementation
+        Set<ComplexStore> sortedStoresByDistance = allStores.parallelStream()
+                .map(store -> new ComplexStore(startingPoint.distanceTo(store), store))
+                .collect(Collectors.toCollection(
+                        () -> new ConcurrentSkipListSet<>(Comparator.comparingDouble(ComplexStore::getDistanceToStore))));
 
         return sortedStoresByDistance.stream().limit(5).collect(Collectors.toList());
     }
