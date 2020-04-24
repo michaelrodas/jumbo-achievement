@@ -39,13 +39,14 @@
 
 ### Code/Project Structure:
 * `Backend`:
-    * `core`: contains the classes with the logic, Location calculates distante to a point and StoreLocatorImpl is the service which finds the stores -it uses java streams and lambda expressions-
-    * `dao`: contains the class StoreDAO to load the app's source database, in this case the JSON file.
+    * `core`: contains the classes with the logic, Location calculates distant to a point and StoreLocatorImpl is the service which finds the stores -it uses java streams and lambda expressions-
+    * `dao`: contains the class StoreProvider to load the app's source database, in this case the JSON file.
     * `dto`: contains classes to transfer data in memory like Entities and POJOs
     * `rest/controllers`: contains the class StoreController which is a REST service used to invoke StoreLocator service to get the closest stores list
 			It is a GET type request method, its path is `/stores/{latitude}/{longitude}`
+	* `util`: Utilitarian classes for additional calculations		
   * `Tests`: All classes have unit tests using JUnit and Mockito
-* `Frontend` (Located in folder _resources/public_):
+* `Frontend` (Located in the folder _resources/public_):
     * `assets/css`: contains the file styles.css which includes html configurations for index page
     * `assets/js`: contains the class logic.component.js which has the logic to invoke the app's Backend and show the result
     * `index.html` loads the scripts and shows the result of the application

@@ -13,7 +13,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Collections;
 import java.util.List;
 
 import static com.fasterxml.jackson.databind.DeserializationFeature.ACCEPT_SINGLE_VALUE_AS_ARRAY;
@@ -21,11 +20,11 @@ import static java.util.Collections.unmodifiableList;
 
 @Slf4j
 @Repository
-class StoresProviderImpl implements StoresProvider {
+class StoreProviderImpl implements StoreProvider {
 
     private final String storesFilePath;
 
-    StoresProviderImpl(@Value("${stores.file.path}") String storesFilePath) {
+    StoreProviderImpl(@Value("${stores.file.path}") String storesFilePath) {
         this.storesFilePath = storesFilePath;
     }
 

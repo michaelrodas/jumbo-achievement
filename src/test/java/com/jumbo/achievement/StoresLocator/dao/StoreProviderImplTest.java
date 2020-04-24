@@ -12,15 +12,15 @@ import java.util.Collection;
 
 @RunWith(SpringRunner.class)
 @TestPropertySource("/application.properties")
-public class StoresProviderImplTest {
+public class StoreProviderImplTest {
 
     @Value("${stores.file.path}")
     private String filePath;
 
     @Test
     public void whenRequested_returnsStoresList() {
-        StoresProvider storesProvider = new StoresProviderImpl(filePath);
-        Collection<Store> allStores = storesProvider.getAllStores();
+        StoreProvider storeProvider = new StoreProviderImpl(filePath);
+        Collection<Store> allStores = storeProvider.getAllStores();
         Assert.assertNotNull(allStores);
         Assert.assertEquals(10, allStores.size());
     }

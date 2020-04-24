@@ -1,6 +1,6 @@
 package com.jumbo.achievement.StoresLocator.core;
 
-import com.jumbo.achievement.StoresLocator.dao.StoresProvider;
+import com.jumbo.achievement.StoresLocator.dao.StoreProvider;
 import com.jumbo.achievement.StoresLocator.dto.ComplexStore;
 import com.jumbo.achievement.StoresLocator.dto.Store;
 import org.junit.Assert;
@@ -23,10 +23,10 @@ public class StoreLocatorTest {
 
         List<Store> storesList = buildStoresList();
 
-        StoresProvider storesProviderMock = mock(StoresProvider.class);
-        when(storesProviderMock.getAllStores()).thenReturn(storesList);
+        StoreProvider storeProviderMock = mock(StoreProvider.class);
+        when(storeProviderMock.getAllStores()).thenReturn(storesList);
 
-        StoreLocator storeLocator = new StoreLocatorImpl(storesProviderMock);
+        StoreLocator storeLocator = new StoreLocatorImpl(storeProviderMock);
 
         Location startingPoint = builder().
                 latitude(latitude).
