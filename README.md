@@ -1,3 +1,4 @@
+![Build status](https://github.com/michaelrodas/jumbo-achievement/workflows/Development%20workflow/badge.svg?branch=master)
 ![](https://upload.wikimedia.org/wikipedia/commons/8/8d/Jumbo_Logo.svg)
 # Jumbo stores locator App:
 

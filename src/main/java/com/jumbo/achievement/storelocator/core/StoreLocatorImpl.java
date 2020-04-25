@@ -15,7 +15,7 @@ import static java.util.Comparator.comparingDouble;
 @Service
 final class StoreLocatorImpl implements StoreLocator {
 
-    final private StoreProvider storeProvider;
+    private final StoreProvider storeProvider;
 
     @Autowired
     StoreLocatorImpl(StoreProvider storeProvider) {
