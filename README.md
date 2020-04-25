@@ -36,7 +36,8 @@
 5. To run the app, open class _StoresLocatorApplication_, right click on it and select Run...
 	Or create a Maven run configuration putting the command `clean spring-boot:run` on it
 6. Test the App on [localhost](http://localhost:8080)
-7. Api Documentation on [Swagger UI](http://localhost:8080/swagger-ui.html)
+7. Code test coverage report generates in the path: `target/site/jacoco/index.html`
+8. Api Documentation on [Swagger UI](http://localhost:8080/swagger-ui.html)
 
 ### Code/Project Structure:
 * `Backend`:
