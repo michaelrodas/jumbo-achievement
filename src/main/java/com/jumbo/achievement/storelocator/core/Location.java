@@ -1,4 +1,4 @@
-package com.jumbo.achievement.StoresLocator.core;
+package com.jumbo.achievement.storelocator.core;
 
 import lombok.*;
 

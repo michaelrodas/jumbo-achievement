@@ -1,8 +1,8 @@
-package com.jumbo.achievement.StoresLocator.core;
+package com.jumbo.achievement.storelocator.core;
 
-import com.jumbo.achievement.StoresLocator.dao.StoreProvider;
-import com.jumbo.achievement.StoresLocator.dto.ComplexStore;
-import com.jumbo.achievement.StoresLocator.dto.Store;
+import com.jumbo.achievement.storelocator.dao.StoreProvider;
+import com.jumbo.achievement.storelocator.dto.ComplexStore;
+import com.jumbo.achievement.storelocator.dto.Store;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -10,7 +10,7 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 
-import static com.jumbo.achievement.StoresLocator.core.Location.builder;
+import static com.jumbo.achievement.storelocator.core.Location.builder;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 

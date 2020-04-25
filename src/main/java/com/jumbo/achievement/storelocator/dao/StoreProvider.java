@@ -1,6 +1,6 @@
-package com.jumbo.achievement.StoresLocator.dao;
+package com.jumbo.achievement.storelocator.dao;
 
-import com.jumbo.achievement.StoresLocator.dto.Store;
+import com.jumbo.achievement.storelocator.dto.Store;
 
 import java.util.Collection;
 

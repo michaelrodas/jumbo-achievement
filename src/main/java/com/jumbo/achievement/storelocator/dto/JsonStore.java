@@ -1,4 +1,4 @@
-package com.jumbo.achievement.StoresLocator.dto;
+package com.jumbo.achievement.storelocator.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
