@@ -40,7 +40,7 @@ class StoreProviderImpl implements StoreProvider {
             final InputStream inputStream = Thread.currentThread().getContextClassLoader().getResourceAsStream(storesFilePath);
             final JsonStore jsonStore =  mapper.readValue(inputStream,typeReference);
             stores = unmodifiableList(jsonStore.getStores());
-        } catch (IOException e){
+        } catch (IOException | IllegalArgumentException e){
             log.error("Unable to load JSON file: " + e.getMessage());
         }
         return stores;

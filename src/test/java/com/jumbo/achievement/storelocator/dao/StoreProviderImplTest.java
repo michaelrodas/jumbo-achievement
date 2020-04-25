@@ -24,4 +24,12 @@ public class StoreProviderImplTest {
         Assert.assertNotNull(allStores);
         Assert.assertEquals(10, allStores.size());
     }
+
+    @Test
+    public void whenFileNotFound_returnsEmptyList(){
+        StoreProvider storeProvider = new StoreProviderImpl("dummyFile");
+        Collection<Store> allStores = storeProvider.getAllStores();
+        Assert.assertNotNull(allStores);
+        Assert.assertTrue(allStores.isEmpty());
+    }
 }
