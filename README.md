@@ -8,7 +8,9 @@
 	* IDE (I used IntelliJ IDEA)
 
 >#### Notes:
->>The WebApp is published on Azure and can be accessed through the following url: [Published App](https://storelocator.azurewebsites.net/)
+>>* The WebApp is published on Azure and can be accessed through the following url: [Published App](https://storelocator.azurewebsites.net/)
+>>* CI workflow on [GitHub Actions](https://github.com/michaelrodas/jumbo-achievement/actions)
+>>* Code Quality analysis on [SonarCloud](https://sonarcloud.io/dashboard?id=michaelrodas_jumbo-achievement)
 
 ## Usage:
 1. The user must click on the button `Find stores...` and allow the site to access its location
@@ -36,7 +38,7 @@
 5. To run the app, open class _StoresLocatorApplication_, right click on it and select Run...
 	Or create a Maven run configuration putting the command `clean spring-boot:run` on it
 6. Test the App on [localhost](http://localhost:8080)
-7. Code test coverage report generates in the path: `target/site/jacoco/index.html`
+7. Code test coverage report generates in the path `target/site/jacoco/index.html` with command: `mvn jacoco:report`
 8. Api Documentation on [Swagger UI](http://localhost:8080/swagger-ui.html)
 
 ### Code/Project Structure:

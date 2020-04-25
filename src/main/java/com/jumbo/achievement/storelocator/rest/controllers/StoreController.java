@@ -6,10 +6,7 @@ import com.jumbo.achievement.storelocator.dto.ComplexStore;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Collection;
 
@@ -24,7 +21,7 @@ final class StoreController {
         this.storeLocator = storeLocator;
     }
 
-    @RequestMapping(value = "/{latitude}/{longitude}", method = RequestMethod.GET)
+    @GetMapping(value = "/{latitude}/{longitude}")
     public ResponseEntity<Collection<ComplexStore>> getNearestStores(
             @PathVariable final double latitude,
             @PathVariable final double longitude) {

@@ -8,6 +8,9 @@ import static java.lang.Math.sqrt;
 
 public class DistanceCalculator {
 
+    private DistanceCalculator() {
+    }
+
     // Compute the distance in meters
     public static double distanceTo(Location location, Store store) {
         final double earthRadius = 3958.75;
