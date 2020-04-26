@@ -1,5 +1,5 @@
 ![Build status](https://github.com/michaelrodas/jumbo-achievement/workflows/Development%20workflow/badge.svg?branch=master)
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=michaelrodas_jumbo-achievement&metric=alert_status)](https://sonarcloud.io/dashboard?id=michaelrodas_jumbo-achievement)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=michaelrodas_jumbo-achievement&metric=coverage)](https://sonarcloud.io/dashboard?id=michaelrodas_jumbo-achievement)
 ![](https://upload.wikimedia.org/wikipedia/commons/8/8d/Jumbo_Logo.svg)
 # Jumbo stores locator App:
 
