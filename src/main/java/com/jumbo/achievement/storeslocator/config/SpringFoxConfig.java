@@ -1,4 +1,4 @@
-package com.jumbo.achievement.storelocator.config;
+package com.jumbo.achievement.storeslocator.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

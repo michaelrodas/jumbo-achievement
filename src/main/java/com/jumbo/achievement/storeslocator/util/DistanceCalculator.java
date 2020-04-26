@@ -1,7 +1,7 @@
-package com.jumbo.achievement.storelocator.util;
+package com.jumbo.achievement.storeslocator.util;
 
-import com.jumbo.achievement.storelocator.dto.Location;
-import com.jumbo.achievement.storelocator.dto.Store;
+import com.jumbo.achievement.storeslocator.dto.Location;
+import com.jumbo.achievement.storeslocator.dto.Store;
 
 import static java.lang.Math.*;
 import static java.lang.Math.sqrt;

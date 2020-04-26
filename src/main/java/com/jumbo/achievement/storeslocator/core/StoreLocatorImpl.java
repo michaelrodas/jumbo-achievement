@@ -1,16 +1,16 @@
-package com.jumbo.achievement.storelocator.core;
+package com.jumbo.achievement.storeslocator.core;
 
-import com.jumbo.achievement.storelocator.dao.StoreProvider;
-import com.jumbo.achievement.storelocator.dto.ComplexStore;
-import com.jumbo.achievement.storelocator.dto.Location;
-import com.jumbo.achievement.storelocator.dto.Store;
+import com.jumbo.achievement.storeslocator.dao.StoreProvider;
+import com.jumbo.achievement.storeslocator.dto.ComplexStore;
+import com.jumbo.achievement.storeslocator.dto.Location;
+import com.jumbo.achievement.storeslocator.dto.Store;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Collection;
 import java.util.stream.Collectors;
 
-import static com.jumbo.achievement.storelocator.util.DistanceCalculator.distanceTo;
+import static com.jumbo.achievement.storeslocator.util.DistanceCalculator.distanceTo;
 import static java.util.Comparator.comparingDouble;
 
 @Service

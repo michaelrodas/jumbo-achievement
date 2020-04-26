@@ -1,4 +1,4 @@
-package com.jumbo.achievement.storelocator.dto;
+package com.jumbo.achievement.storeslocator.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

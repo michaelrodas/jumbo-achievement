@@ -1,6 +1,6 @@
-package com.jumbo.achievement.storelocator.dao;
+package com.jumbo.achievement.storeslocator.dao;
 
-import com.jumbo.achievement.storelocator.dto.Store;
+import com.jumbo.achievement.storeslocator.dto.Store;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;

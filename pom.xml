@@ -33,6 +33,7 @@
         <sonar.organization>michaelrodas</sonar.organization>
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
         <sonar.login>7e393048f8c5b8c9c53e4a6264e9d4adf2a0007a</sonar.login>
+        <sonar.coverage.exclusions>src/main/java/com/jumbo/achievement/storeslocator/StoresLocatorApplication.java,src/main/java/com/jumbo/achievement/storeslocator/config/SpringFoxConfig.java</sonar.coverage.exclusions>
     </properties>
 
     <dependencies>

@@ -1,4 +1,4 @@
-package com.jumbo.achievement.storelocator;
+package com.jumbo.achievement.storeslocator;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

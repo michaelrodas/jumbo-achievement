@@ -1,9 +1,9 @@
-package com.jumbo.achievement.storelocator.dao;
+package com.jumbo.achievement.storeslocator.dao;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.jumbo.achievement.storelocator.dto.JsonStore;
-import com.jumbo.achievement.storelocator.dto.Store;
+import com.jumbo.achievement.storeslocator.dto.JsonStore;
+import com.jumbo.achievement.storeslocator.dto.Store;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cache.annotation.Cacheable;

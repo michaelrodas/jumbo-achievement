@@ -1,8 +1,8 @@
-package com.jumbo.achievement.storelocator.rest.controllers;
+package com.jumbo.achievement.storeslocator.rest.controllers;
 
-import com.jumbo.achievement.storelocator.core.StoreLocator;
-import com.jumbo.achievement.storelocator.dto.ComplexStore;
-import com.jumbo.achievement.storelocator.dto.Store;
+import com.jumbo.achievement.storeslocator.core.StoreLocator;
+import com.jumbo.achievement.storeslocator.dto.ComplexStore;
+import com.jumbo.achievement.storeslocator.dto.Store;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +13,6 @@ import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 
 import static java.util.Collections.emptyList;
