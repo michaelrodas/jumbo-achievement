@@ -1,7 +1,6 @@
 package com.jumbo.achievement.storelocator.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -9,7 +8,6 @@ import lombok.Setter;
 import java.util.List;
 
 @NoArgsConstructor
-@AllArgsConstructor
 @Getter
 @Setter
 public class JsonStore {
@@ -17,7 +15,6 @@ public class JsonStore {
     private Attributes attributes;
     private List<Store> stores;
 
-    @NoArgsConstructor
     private static class Attributes {
     }
 }

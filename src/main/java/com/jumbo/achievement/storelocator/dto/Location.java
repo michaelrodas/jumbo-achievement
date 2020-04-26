@@ -7,9 +7,9 @@ import lombok.Getter;
 @AllArgsConstructor
 @Builder
 @Getter
-public class ComplexStore {
+public class Location {
 
-    private double distanceToStore;
-    private Store store;
+    private double latitude;
+    private double longitude;
 
 }

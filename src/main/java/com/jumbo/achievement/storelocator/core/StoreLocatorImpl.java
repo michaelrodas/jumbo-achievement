@@ -2,6 +2,7 @@ package com.jumbo.achievement.storelocator.core;
 
 import com.jumbo.achievement.storelocator.dao.StoreProvider;
 import com.jumbo.achievement.storelocator.dto.ComplexStore;
+import com.jumbo.achievement.storelocator.dto.Location;
 import com.jumbo.achievement.storelocator.dto.Store;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -1,6 +1,6 @@
 package com.jumbo.achievement.storelocator.rest.controllers;
 
-import com.jumbo.achievement.storelocator.core.Location;
+import com.jumbo.achievement.storelocator.dto.Location;
 import com.jumbo.achievement.storelocator.core.StoreLocator;
 import com.jumbo.achievement.storelocator.dto.ComplexStore;
 import org.springframework.beans.factory.annotation.Autowired;

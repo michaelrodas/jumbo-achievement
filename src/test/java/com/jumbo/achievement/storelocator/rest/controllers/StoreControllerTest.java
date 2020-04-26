@@ -13,8 +13,10 @@ import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
+import static java.util.Collections.emptyList;
 import static org.hamcrest.collection.IsCollectionWithSize.hasSize;
 import static org.hamcrest.core.Is.is;
 import static org.mockito.ArgumentMatchers.any;
@@ -44,6 +46,17 @@ public class StoreControllerTest {
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$", hasSize(3)))
                 .andExpect(jsonPath("$[0].distanceToStore", is(1.07)));
+    }
+
+    @Test
+    public void givenInitialPosition_whenNoFoundStores_thenReturnsEmpty()
+            throws Exception {
+
+        given(service.locateNearestStores(any())).willReturn(emptyList());
+
+        mvc.perform(get("/stores/4.651356/-74.0603624")
+                .contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().isNoContent());
     }
 
     private List<ComplexStore> getFoundStoresList() {
