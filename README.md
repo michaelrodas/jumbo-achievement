@@ -10,7 +10,7 @@
 	* IDE (I used IntelliJ IDEA)
 
 >#### Notes:
->>The WebApp is published on Azure and can be accessed through the following url: [Published App](https://storelocator.azurewebsites.net/)
+>>The WebApp is published on DockerHub and can be accessed through the following url: [Container](https://hub.docker.com/repository/docker/michaeldemonio/storeslocator)
 
 ## Usage:
 1. The user must click on the button `Find stores...` and allow the site to access its location
