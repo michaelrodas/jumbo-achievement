@@ -131,5 +131,12 @@
         </plugins>
     </build>
 
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>Springboot application which finds 5 closest Jumbo stores to user's location</name>
+            <url>https://maven.pkg.github.com/michaelrodas/jumbo-achievement</url>
+        </repository>
+    </distributionManagement>
 
 </project>
