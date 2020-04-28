@@ -23,7 +23,6 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
         <versions-maven-plugin.version>2.7</versions-maven-plugin.version>
-        <azure-webapp.verson>1.9.1</azure-webapp.verson>
         <maven.version>3.6.0</maven.version>
         <springfox-swagger2.version>2.9.2</springfox-swagger2.version>
         <springfox-swagger-ui.version>2.9.2</springfox-swagger-ui.version>
@@ -33,7 +32,11 @@
         <sonar.organization>michaelrodas</sonar.organization>
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
         <sonar.login>7e393048f8c5b8c9c53e4a6264e9d4adf2a0007a</sonar.login>
-        <sonar.coverage.exclusions>src/main/java/com/jumbo/achievement/storeslocator/StoresLocatorApplication.java,src/main/java/com/jumbo/achievement/storeslocator/config/SpringFoxConfig.java</sonar.coverage.exclusions>
+        <sonar.coverage.exclusions>
+            src/main/java/com/jumbo/achievement/storeslocator/StoresLocatorApplication.java,
+            src/main/java/com/jumbo/achievement/storeslocator/config/SpringFoxConfig.java,
+            src/main/java/com/jumbo/achievement/storeslocator/dto/JsonStore.java
+        </sonar.coverage.exclusions>
     </properties>
 
     <dependencies>
@@ -125,20 +128,15 @@
                     </execution>
                 </executions>
             </plugin>
-            <plugin>
-                <groupId>com.microsoft.azure</groupId>
-                <artifactId>azure-webapp-maven-plugin</artifactId>
-                <version>${azure-webapp.verson}</version>
-                <configuration>
-
-                    <!-- Web App information -->
-                    <resourceGroup>QADEVOPS</resourceGroup>
-                    <appName>StoreLocator</appName>
-                    <javaVersion>${java.version}</javaVersion>
-                </configuration>
-            </plugin>
         </plugins>
     </build>
 
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>Springboot application which finds 5 closest Jumbo stores to user's location</name>
+            <url>https://maven.pkg.github.com/michaelrodas/jumbo-achievement</url>
+        </repository>
+    </distributionManagement>
 
 </project>
