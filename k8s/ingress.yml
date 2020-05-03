@@ -1,0 +1,22 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    external-dns.alpha.kubernetes.io/hostname: storelocator.com
+    kubernetes.io/ingress.class: internal-traffic
+    nginx.ingress.kubernetes.io/server-snippet: add_header myservice storelocator
+  name: storelocator
+  namespace: experimental
+spec:
+  rules:
+    - host: storelocator.com
+      http:
+        paths:
+          - backend:
+              serviceName: storelocator
+              servicePort: 8080
+            path: /
+  tls:
+    - hosts:
+        - storelocator.com
+      secretName: wildcard.storelocator.com

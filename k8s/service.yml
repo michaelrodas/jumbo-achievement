@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: storelocator
+  namespace: experimental
+  labels:
+    app: storelocator
+spec:
+  ports:
+    - port: 8080
+      name: tomcat
+  selector:
+    app: storelocator
+  type: ClusterIP
