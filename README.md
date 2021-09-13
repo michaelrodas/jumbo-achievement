@@ -55,5 +55,5 @@
     * `assets/js`: contains the class logic.component.js which has the logic to invoke the app's Backend and show the result
     * `index.html` loads the scripts and shows the result of the application
     
-###Project's file diagram:
+### Project's file diagram:
 ![Visualization of this repo](./diagram.svg)
