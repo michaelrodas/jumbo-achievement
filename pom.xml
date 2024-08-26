@@ -25,7 +25,7 @@
         <versions-maven-plugin.version>2.7</versions-maven-plugin.version>
         <maven.version>3.6.0</maven.version>
         <springfox-swagger2.version>2.9.2</springfox-swagger2.version>
-        <springfox-swagger-ui.version>2.9.2</springfox-swagger-ui.version>
+        <springfox-swagger-ui.version>2.10.0</springfox-swagger-ui.version>
         <jacoco-maven-plugin.version>0.8.5</jacoco-maven-plugin.version>
         <!-- SonarCloud configuration -->
         <sonar.projectKey>michaelrodas_jumbo-achievement</sonar.projectKey>
